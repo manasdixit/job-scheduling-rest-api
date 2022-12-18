@@ -17,7 +17,7 @@ import { WorkerModule } from './worker/worker.module';
       port: 3306,
       username: 'root',
       password: 'password',
-      database: 'library',
+      database: 'jobschedules',
       entities: [User, Worker],
       synchronize: true,
       dropSchema: true,
