@@ -6,6 +6,7 @@ import { User } from './users/entities/user.entity';
 import { UsersModule } from './users/users.module';
 import { Worker } from './worker/entities/worker.entity';
 import { WorkerModule } from './worker/worker.module';
+import { TimeSlotsModule } from './time-slots/time-slots.module';
 
 @Module({
   imports: [
@@ -20,8 +21,8 @@ import { WorkerModule } from './worker/worker.module';
       database: 'jobschedules',
       entities: [User, Worker],
       synchronize: true,
-      dropSchema: true,
     }),
+    TimeSlotsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

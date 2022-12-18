@@ -17,9 +17,8 @@ export class User {
   @Column({ default: null })
   name: string;
 
-  @ManyToMany((type) => Worker, (worker) => worker.users)
-  @JoinTable()
-  workers: Worker[];
+  @Column({ default: null })
+  workerId: number;
 
   @UpdateDateColumn()
   updated_at: Date;
